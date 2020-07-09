@@ -8,15 +8,15 @@ out/post/%.html: src/post/%.md
 
 .PHONY: fn/extract_frontmatter/%
 fn/extract_frontmatter/%: src/post/%.md
-	csplit -f .cache/post/$*- -b %01d.part $< '%---%+1' '/---/'
-	mv .cache/post/$*-0.part .cache/post/$*.yaml
-	mv .cache/post/$*-1.part .cache/post/$*.pretail.md
-	tail -n+2 .cache/post/$*.pretail.md > .cache/post/$*.md
-	rm .cache/post/$*.pretail.md
+	csplit -f .build/post/$*- -b %01d.part $< '%---%+1' '/---/'
+	mv .build/post/$*-0.part .build/post/$*.yaml
+	mv .build/post/$*-1.part .build/post/$*.pretail.md
+	tail -n+2 .build/post/$*.pretail.md > .build/post/$*.md
+	rm .build/post/$*.pretail.md
 
-.cache/post/%.yaml: fn/extract_frontmatter/%
+.build/post/%.yaml: fn/extract_frontmatter/%
 	
-.cache/post/%.md: fn/extract_frontmatter/%
+.build/post/%.md: fn/extract_frontmatter/%
 	
 
 
@@ -25,7 +25,7 @@ clean:
 	mkdir -p out
 	mkdir -p out/post
 	mkdir -p out/tags
-	mkdir -p .cache
+	mkdir -p .build
 
 
 .PHONY: posts
