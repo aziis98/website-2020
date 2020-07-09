@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+<div class="page-title">
+    <h2>aziis98's blog</h2>
+</div>
+
+<ol class="list">
+    {{ $pages := (where .Site.RegularPages "Type" "in" "post") }}
+    
+    {{ if eq (getenv "ACADEMIC") "true" }}
+        {{ $academic := (where .Site.RegularPages "Type" "in" "academic") }}
+        {{ $pages := union $pages $academic }}
+
+        {{ $pag := .Paginate (where $pages ".Params.featured" "==" nil) }}
+        {{ range $pag.Pages }}
+            {{ partial "item.html" . }}
+        {{ end }}
+
+        {{ $pag := .Paginate (where $pages ".Params.featured" "!=" nil) }}
+        {{ range $pag.Pages }}
+            {{ partial "item.html" . }}
+        {{ end }}
+
+    {{ else }}
+
+        {{ $pag := .Paginate (where $pages ".Params.featured" "!=" nil) }}
+        {{ range $pag.Pages }}
+            {{ partial "item.html" . }}
+        {{ end }}
+
+        {{ $pag := .Paginate (where $pages ".Params.featured" "==" nil) }}
+        {{ range $pag.Pages }}
+            {{ partial "item.html" . }}
+        {{ end }}
+    
+        {{ end }}
+</ol>
+
+{{ partial "pagination.html" . }}
+
+{{ partial "footer.html" . }}

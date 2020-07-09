@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html{{ if .Site.Params.opengraph }} prefix="og: http://ogp.me/ns#" {{ end }}>
+
+      <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>{{ .Title }} &mdash; {{ .Site.Params.nickname }}</title>
+            <meta name="description"
+                  content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+            <meta name="HandheldFriendly" content="True">
+            <meta name="MobileOptimized" content="320">
+            {{ hugo.Generator }}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            {{ if .Site.Params.opengraph }}
+                  <meta property="og:title" content="{{ .Title }}">
+                  <meta property="og:description"
+                        content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+                  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+                  <meta property="og:url" content="{{ .Permalink }}">
+                  {{- with .Params.images }}
+                        {{- range first 6 . }}
+                              <meta property="og:image" content="{{ . | absURL }}" />
+                        {{- end }}
+                  {{- end }}
+            {{ end }}
+
+            {{ if .OutputFormats.Get "RSS" }}
+            <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate"
+                  type="application/rss+xml">
+            {{ end }}
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+            <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+            <!-- 
+            <script>
+                  MathJax = {
+                        tex: {
+                              inlineMath: [['$', '$']],
+                              displayMath: [['$$', '$$']]
+                        },
+                        svg: {
+                              fontCache: 'global'
+                        }
+                  };
+            </script>
+            <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+                  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+                  crossorigin="anonymous">
+            <script type="module">
+                  import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.mjs";
+                  renderMathInElement(document.body, {
+                        delimiters: [
+                              { left: "$$", right: "$$", display: true },
+                              { left: "$", right: "$", display: false }
+                        ]
+                  });
+            </script>
+
+      </head>
+
+      <body>
+
+            {{ partial "navigation.html" . }}
+
+            <main>
