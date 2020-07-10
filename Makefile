@@ -1,8 +1,7 @@
 
 POSTS = $(wildcard src/post/*)
 
-
-out/post/%.html: src/post/%.md
+out/post/%.html: .build/post/%.md
 	pandoc --katex $< -o $@
 
 
@@ -17,7 +16,12 @@ fn/extract_frontmatter/%: src/post/%.md
 .build/post/%.yaml: fn/extract_frontmatter/%
 	
 .build/post/%.md: fn/extract_frontmatter/%
-	
+
+.build/post/%.html: .build/post/%.md .build/post/%.yaml
+	echo '{{ define "content" }}' > $@
+	pandoc $< >> $@
+	echo '{{ end }}' >> $@
+	gotemplater -f yaml -o .build/post/$*.post.html -e main .build/post/$*.html layouts/post.html < .build/post/$*.yaml 
 
 
 .PHONY: clean
@@ -30,3 +34,4 @@ clean:
 
 .PHONY: posts
 posts: 
+	@echo $(POSTS)
