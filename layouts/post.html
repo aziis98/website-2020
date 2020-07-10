@@ -57,9 +57,7 @@
                 <h1 class="post-title">{{ .title }}</h1>
                 <div class=" post-date">
                     Pubblicato il
-                    <time datetime="{ .Date.Format "2006-01-02" }">
-                        { dateFormat "Mon, Jan 2, 2006" .date }
-                    </time>
+                    <time datetime="{{ .date }}">{{ .date }}</time>
                     da
                     <a href="#" rel="author">Antonio De Lucreziis</a>
                 </div>

@@ -1,7 +1,6 @@
 ---
 title: Regex Split Parsing
-description: 
-author: 
+description: A description
 date: 2020-07-03T14:06:01+02:00
 tags: [a, b, c, d]
 ---
