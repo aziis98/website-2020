@@ -2,6 +2,9 @@
 title: Test
 description: Migrating from Jekyll description.
 date: 2020-06-25T17:13:50Z
+tags:
+    - a
+    - c
 ---
 
 # Article Title

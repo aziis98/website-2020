@@ -2,7 +2,7 @@
 title: Regex Split Parsing
 description: A description
 date: 2020-07-03T14:06:01+02:00
-tags: [a, b, c, d]
+tags: [a, b, d]
 ---
 
 I found a cool tecnique to do simple parsing of a string by repetitive split of string using regular expression (and eccessive use of lookahaeds). 

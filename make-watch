@@ -1,0 +1,3 @@
+#!/bin/sh
+
+inotifywait -m -e close_write,move,move_self,create,delete -r src | while read; do make $*; done
