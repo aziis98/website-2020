@@ -1,0 +1,4 @@
+#!/bin/sh
+make -B $*
+live-server -q ./out & 
+inotifywait -m -e close_write,move,move_self,create,delete -r src layouts | while read; do make $*; done

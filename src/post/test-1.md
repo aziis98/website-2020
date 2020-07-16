@@ -1,10 +1,8 @@
 ---
 title: Test
 description: Migrating from Jekyll description.
-date: 2020-06-25T17:13:50Z
+date: 25 Maggio 2020
 ---
-
-# Article Title
 
 Id nisi minim et reprehenderit exercitation ad anim. Nostrud elit ad deserunt ea id magna sit do ea pariatur sunt.
 

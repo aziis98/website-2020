@@ -19,7 +19,7 @@ TAGS_PATH = .build/tags/*.tag
 .build/post/%.html: .build/post/%.md
 	pandoc --quiet $< -o $@
 
-out/post/%.html: .build/post/%.html
+out/post/%.html: .build/post/%.html .build/post/%.yaml
 	gotemplater -o $@ -f yaml -d .build/post/$*.yaml -c $< layouts/post.html
 
 .build/tags/%.tag: .build/post/%.yaml
@@ -44,6 +44,12 @@ tags: clean_tags $(POSTS_BUILD_TAGS)
 	        jq -nR '[inputs | select(length>0)]' $$line.tag > $$line.json; \
 	    done
 
+.PHONY: assets
+assets:
+	cp -r src/static out/
+
+.PHONY: all
+all: posts assets
 
 .PHONY: clean
 clean:

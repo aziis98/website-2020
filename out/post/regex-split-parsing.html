@@ -23,7 +23,8 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/lovelace.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
           integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
@@ -54,16 +55,21 @@
         <article>
             <header class="post-header">
                 <h1 class="post-title">Regex Split Parsing</h1>
-                <div class=" post-date">
+                <div class="post-date">
                     Pubblicato il
-                    <time datetime="2020-07-03T14:06:01&#43;02:00">2020-07-03T14:06:01&#43;02:00</time>
+                    <span>3 Luglio 2020</span>
                     da
-                    <a href="#" rel="author">Antonio De Lucreziis</a>
+                    <a href="/" rel="author">Antonio De Lucreziis</a>
                 </div>
-                <p class="post-reading">
-                    <span>
-                        Tempo di lettura ?? min
-                    </span>
+                <p class="post-tags">
+                    
+                    
+                    <a href="/tags/regex" class="tag">#regex</a>
+                    
+                    <a href="/tags/javascript" class="tag">#javascript</a>
+                    
+                    <a href="/tags/parsing" class="tag">#parsing</a>
+                    
                 </p>
             </header>
             
@@ -75,11 +81,13 @@
 <p>First lets remove all the spaces by appling</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">let</span> _ <span class="op">=</span> p1<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>_ <span class="op">=</span> _<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/</span><span class="op">,</span> <span class="st">&#39;&#39;</span>)<span class="op">;</span> <span class="co">// &quot;-4x^3+x^2-17x+1.5&quot;</span></span></code></pre></div>
-<p>Now we want to separate all various terms, a term is matched by the regular expression</p>
+<p>Now we want to separate all various terms, a term is matched by the regular expression. Now we want to separate all various terms, a term is matched by the regular expression. Now we want to separate all various terms, a term is matched by the regular expression.</p>
 <p><br /><span class="math display">$$
-\underbrace{\texttt{[-+]?}}_{\text{sign}}
-\underbrace{\texttt{\textbackslash d+(\textbackslash.\textbackslash d+)?}}_{\text{coeficient}}
+\underbrace{\texttt{[-+]?}}_{\text{sign}} \,
+\underbrace{\texttt{\textbackslash d+(\textbackslash.\textbackslash d+)?}}_{\text{coeficient}} \,
+\dots
 $$</span><br /></p>
+<p>Now we want to separate all various terms, a term is matched by the regular expression</p>
 
         
         </article>
@@ -91,7 +99,7 @@ $$</span><br /></p>
         <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
     </footer>
 
-    <script src="/js/ux.js"></script>
+    <script src="/static/js/ux.js"></script>
 </body>
 
 </html>
