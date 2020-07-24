@@ -184,7 +184,7 @@ figure img {
     box-shadow: var(--card-shadow-large);
 }
 
-a.tag {
+a.tag, a.tag:visited {
     background: royalblue;
     color: white;
     border-radius: 4px;
@@ -278,6 +278,9 @@ nav .logo:hover {
     align-items: center;
 }
 
+.posts > * {
+    margin-bottom: 1rem;
+}
 
 /* Nav on small screens */
 
@@ -457,16 +460,14 @@ nav .logo:hover {
 
 .card {
     border-radius: 4px;
-    padding: 7px;
+    padding: 1rem;
     box-shadow: var(--card-shadow);
 }
 
 .card-title {
-    text-align: center;
     font: var(--font-title);
     font-size: 1.333rem;
 }
-
 
 /* Hugo */
 
@@ -525,4 +526,8 @@ header.post-header {
 
 p > br:first-child, p > br:last-child {
     display: none;
+}
+
+.center {
+    text-align: center;
 }

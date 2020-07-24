@@ -1,0 +1,11 @@
+<h2 class="center">#{{ .name }}</h2>
+
+<p>References:</p>
+
+<ul>
+    {{ range .refs }}
+    <li>
+        <a href="/post/{{ . }}.html">{{ . }}</a>
+    </li>
+    {{ end }}
+</ul>
