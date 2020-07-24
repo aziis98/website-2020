@@ -24,10 +24,10 @@ endif
 ## Targets
 
 .PHONY: all
-all: pages posts assets tags .out/index.html
+all: clean pages posts assets tags .out/index.html
 
-.PHONY: notags
-notags: pages posts assets .out/index.html
+.PHONY: content
+content: pages posts assets .out/index.html
 
 ## Main target groups
 
