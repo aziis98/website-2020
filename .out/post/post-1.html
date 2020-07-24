@@ -6,23 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>
-        {{ if .title }}
-        {{ .title }} &mdash; aziis98.com
-        {{ else }}
-        aziis98.com
-        {{ end }}
+        
+        Post 1 &mdash; aziis98.com
+        
     </title>
 
-    <meta name="description" content="{{ .description }}">
+    <meta name="description" content="Post di prova di watch-make">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="{{ .title }}">
-    <meta property="og:description" content="{{ .description }}">
+    <meta property="og:title" content="Post 1">
+    <meta property="og:description" content="Post di prova di watch-make">
 
-    <!-- TODO: RSS -->
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,14 +55,31 @@
             <a class="logo" href="/" title="aziis98.com">&Aopf;</a>
             <div class="nav-group">
                 <a class="nav-link" href="/">Posts</a>
-                <a class="nav-link" href="/page/about.html">About</a>
-                <a class="nav-link" href="/page/appunti.html">Appunti</a>
+                <a class="nav-link" href="/about.html">About</a>
+                <a class="nav-link" href="/appunti.html">Appunti</a>
             </div>
         </nav>
     </div>
     <main>
             
-        {{ .content }}
+        <article>
+    <header class="post-header">
+        <h1 class="post-title">Post 1</h1>
+        <div class="post-date">
+            Pubblicato il
+            <span>14 Luglio 2020</span>
+            da
+            <a href="/" rel="author">Antonio De Lucreziis</a>
+        </div>
+        <p class="post-tags">
+            
+        </p>
+    </header>
+
+    <h1 id="prova-1">Prova 1</h1>
+
+
+</article>
 
     </main>
     <footer>
