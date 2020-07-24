@@ -23,7 +23,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -66,8 +67,14 @@ p {
     margin-bottom: 1.15rem;
 }
 
+
 /* Major Third: q = 1.250 */
-h1, h2, h3, h4, h5 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 2.75rem 0 1.05rem;
     font-weight: 400;
     line-height: 1.15;
@@ -77,6 +84,7 @@ h1, h2, h3, h4, h5 {
 h1 {
     margin-top: 0;
     font-size: 4.209em;
+    line-height: 0.95;
 }
 
 h2 {
@@ -95,7 +103,8 @@ h5 {
     font-size: 1.333em;
 }
 
-small, .text_small {
+small,
+.text_small {
     font-size: 0.75em;
 }
 
@@ -127,7 +136,8 @@ h5 {
     font-size: 1.333em;
 } */
 
-b, strong {
+b,
+strong {
     font: var(--font-text-bold);
 }
 
@@ -140,7 +150,8 @@ p>code {
     color: #111;
 }
 
-pre, pre>code {
+pre,
+pre>code {
     font: calc(var(--font-size) * 0.8) 'IBM Plex Mono', monospace;
 }
 
@@ -184,7 +195,8 @@ figure img {
     box-shadow: var(--card-shadow-large);
 }
 
-a.tag, a.tag:visited {
+a.tag,
+a.tag:visited {
     background: royalblue;
     color: white;
     border-radius: 4px;
@@ -195,10 +207,11 @@ a.tag, a.tag:visited {
 
 a.tag:hover {
     text-decoration: none;
-    background:rgb(29, 68, 184);
+    background: rgb(29, 68, 184);
 }
 
-a, a:visited {
+a,
+a:visited {
     color: royalblue;
     cursor: pointer;
     text-decoration: none;
@@ -236,10 +249,11 @@ a.external::after {
 /* Desktop */
 
 nav .logo {
+    --logo-size: 2.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 100ms linear;
+    transition: all 100ms ease-in-out;
     color: #333;
 }
 
@@ -247,6 +261,14 @@ nav .logo:hover {
     color: royalblue !important;
     border-color: royalblue !important;
     text-decoration: none !important;
+}
+
+nav .logo svg path {
+    transition: all 100ms ease-in-out;
+}
+
+nav .logo:hover svg path {
+    fill: royalblue !important;
 }
 
 #toggle-menu {
@@ -278,9 +300,10 @@ nav .logo:hover {
     align-items: center;
 }
 
-.posts > * {
+.posts>* {
     margin-bottom: 1rem;
 }
+
 
 /* Nav on small screens */
 
@@ -294,11 +317,9 @@ nav .logo:hover {
     nav {
         --toggle-duration: 0.4s;
         --max-height: 35vh;
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         width: 100%;
         overflow-y: hidden;
         transition: max-height var(--toggle-duration) ease-out;
@@ -310,9 +331,9 @@ nav .logo:hover {
         box-shadow: var(--card-shadow);
     }
     nav .logo {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 2.5rem;
+        --logo-size: 2.5rem;
+        width: var(--logo-size);
+        height: var(--logo-size);
         border: 2px solid #333;
     }
     .nav-group {
@@ -383,7 +404,7 @@ nav .logo:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         z-index: 1;
@@ -398,10 +419,9 @@ nav .logo:hover {
         padding: 0 1rem;
     }
     nav .logo {
-        font-size: 2.5rem;
         border: 3px solid #333;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: var(--logo-size);
+        height: var(--logo-size);
     }
     body.not-on-top nav {
         height: 2.25rem;
@@ -457,8 +477,12 @@ nav .logo:hover {
 /* Mobile */
 
 @media screen and (max-width: 30rem) {
-    body {
+    /* body {
         max-width: unset;
+    } */
+
+    h1 {
+        font-size: 4rem;
     }
 }
 
@@ -476,6 +500,7 @@ nav .logo:hover {
     font-size: 1.333rem;
 }
 
+
 /* Hugo */
 
 ol.list li {
@@ -491,7 +516,7 @@ ol.list h5 {
 }
 
 main {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 header.post-header {
@@ -509,7 +534,8 @@ header.post-header {
     flex-wrap: wrap;
 }
 
-.post-tags, .post-date {
+.post-tags,
+.post-date {
     color: #666;
     font-size: 15px;
 }
@@ -532,9 +558,11 @@ header.post-header {
     padding: 0 1rem;
 }
 
+
 /* Pandoc */
 
-p > br:first-child, p > br:last-child {
+p>br:first-child,
+p>br:last-child {
     display: none;
 }
 

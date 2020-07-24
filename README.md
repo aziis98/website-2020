@@ -8,11 +8,11 @@ This time using a good old [Makefile](./Makefile).
 
 - [./layouts](./layouts)
 
-    Holds all layouts and templating files.
+    Holds all layouts and templating files (so all dynamic pages).
 
 - [./src](./src)
 
-    All content (posts, pages) and dynamic pages (homepage) are here 
+    All content (posts, pages)
 
 - [./src/post](./src/post)
 
