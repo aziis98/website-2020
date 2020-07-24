@@ -1,6 +1,6 @@
 
 PAGES 	  = $(wildcard src/page/*)
-PAGES_OUT = $(patsubst src/page/%.md, .out/page/%.html, $(PAGES))
+PAGES_OUT = $(patsubst src/page/%.html, .out/page/%.html, $(PAGES))
 
 POSTS 	   = $(wildcard src/post/*)
 POSTS_REFS = $(patsubst src/post/%.md, %, $(POSTS))
