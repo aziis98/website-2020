@@ -6,15 +6,15 @@ This time using a good old [Makefile](./Makefile), see the post on <aziis98.com/
 
 ### Source files
 
-- [./layouts](./layouts)
+- [layouts](./layouts)
 
     Holds all layouts and templating files (so all dynamic pages).
 
-- [./src](./src)
+- [src](./src)
 
     All content (posts, pages)
 
-- [./src/post](./src/post)
+- [src/post](./src/post)
 
     Contains all markdown posts, each post is passed thorugh
 
@@ -22,11 +22,11 @@ This time using a good old [Makefile](./Makefile), see the post on <aziis98.com/
     POST |> pandoc |> ./layouts/post.html |>  ./layouts/_base.html
     ```
 
-- [./src/page](./src/page)
+- [src/page](./src/page)
 
-    Contains all HTML pages, the base layout is [./layouts/_base.html](./layouts/_base.html).
+    Contains all HTML pages, the base layout is [layouts/_base.html](./layouts/_base.html).
 
-- [./src/static](./src/static)
+- [src/static](./src/static)
 
     Contains all static files mainly js, css and images.
 
