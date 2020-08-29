@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>
-        {{ if .title }}
-        {{ .title }} &mdash; aziis98.com
-        {{ else }}
+        
         aziis98.com
-        {{ end }}
+        
     </title>
 
-    <meta name="description" content="{{ .description }}">
+    <meta name="description" content="">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -21,11 +19,11 @@
 
     <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192x192.png">
 
-    <meta property="og:title" content="{{ .title }}">
-    <meta property="og:description" content="{{ .description }}">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
     <meta property="og:image" content="/static/icon-192x192.png" />
 
-    <!-- TODO: RSS -->
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,19 +75,29 @@
             <div class="nav-group">
                 <a class="nav-link" href="/">Posts</a>
                 <a class="nav-link" href="/page/about.html">About</a>
-                <a id="nav-unipi" style="display: none;" class="nav-link" href="/page/unipi.html">Università</a>
+                <a style="display: none;" class="nav-link" href="/page/appunti.html">Appunti</a>
             </div>
         </nav>
     </div>
     <main>
 
-        {{ .content }}
+        <h1>Appunti</h1>
+
+Qui c'è una raccolta di appunti e dispense scritti nel corso dei tre anni alla Triennale all'<a href="https://unipi.it">Università di Pisa</a> per la laurea in <a href="https://dm.unipi.it">Matematica</a>.
+
+<h3>Triennale</h3>
+
+<ul>
+    <li>
+        <a href="#">Dispense di Geometria 2, 2019/2020</a> del corso tenuto dal professor Roberto Frigerio, Jacopo Gandini (esercitatore I semestre) e Francesco Sala (esercitatore II semestre).
+    </li>
+</ul>
 
     </main>
     <footer>
         &copy; Antonio De Lucreziis 2020
 
-        <!-- <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a> -->
+        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
     </footer>
 
     <script src="/static/js/ux.js"></script>

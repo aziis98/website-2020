@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>
-        {{ if .title }}
-        {{ .title }} &mdash; aziis98.com
-        {{ else }}
+        
         aziis98.com
-        {{ end }}
+        
     </title>
 
-    <meta name="description" content="{{ .description }}">
+    <meta name="description" content="">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -21,11 +19,11 @@
 
     <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192x192.png">
 
-    <meta property="og:title" content="{{ .title }}">
-    <meta property="og:description" content="{{ .description }}">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
     <meta property="og:image" content="/static/icon-192x192.png" />
 
-    <!-- TODO: RSS -->
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,13 +81,35 @@
     </div>
     <main>
 
-        {{ .content }}
+        <h1 class="center">aziis98.com</h1>
+
+<h3 class="center">Posts</h3>
+
+<div class="posts">
+    
+    <div class="card">
+        <div class="card-title"><a href="/post/new-website.html">New Website</a></div>
+        <div>
+            New website generated with a Makefile
+        </div>
+        <span class="post-date">29 August 2020</span>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/post/regex-split-parsing.html">Regex Split Parsing</a></div>
+        <div>
+            A description
+        </div>
+        <span class="post-date">3 June 2020</span>
+    </div>
+    
+</div>
 
     </main>
     <footer>
         &copy; Antonio De Lucreziis 2020
 
-        <!-- <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a> -->
+        
     </footer>
 
     <script src="/static/js/ux.js"></script>

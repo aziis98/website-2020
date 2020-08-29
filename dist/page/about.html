@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>
-        {{ if .title }}
-        {{ .title }} &mdash; aziis98.com
-        {{ else }}
+        
         aziis98.com
-        {{ end }}
+        
     </title>
 
-    <meta name="description" content="{{ .description }}">
+    <meta name="description" content="">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -21,11 +19,11 @@
 
     <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192x192.png">
 
-    <meta property="og:title" content="{{ .title }}">
-    <meta property="og:description" content="{{ .description }}">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
     <meta property="og:image" content="/static/icon-192x192.png" />
 
-    <!-- TODO: RSS -->
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,13 +81,52 @@
     </div>
     <main>
 
-        {{ .content }}
+        <h1>About</h1>
+
+<p>
+    I'm Antonio De Lucreziis, currently studying maths (see later). I'm interested in computer science, maths,
+    programming, programming languages and recently also in system administration.
+</p>
+
+<p>
+    Sometimes I build things out of paper using some origami techniques. But, if I had the tools, I would probably make
+    them out of real materials.
+</p>
+
+<p>
+    As a consequence, I'm also interested in all things loosely related to engineering and robotics. I own a Raspberry Pi but it only got me in touch with Linux and some system administration as I used to host my website on it with ngnix. 
+</p>
+
+<p>
+    A few years ago I often made some generative art every so ofter and it be found on my Instagram (link below).  
+</p>
+
+<h2>School</h2>
+
+<p>
+    I went to high school in Taranto at Liceo Scientifico Battaglini.
+</p>
+
+<p>
+    For now, I'm taking a degree in Mathematics at the University of Pisa. After that I will attend the two remaining
+    years
+    to get a master (Magistrale) still in Mathematics...
+</p>
+
+<h2>Contatti</h2>
+
+<ul>
+    <li>Email &mdash; <a href="mailto:antonio.delucreziis@gmail.com">antonio.delucreziis@gmail.com</a></li>
+    <li>Instagram &mdash; <a href="https://www.instagram.com/aziis98">www.instagram.com/aziis98/</a></li>
+    <li>GitHub &mdash; <a href="https://github.com/aziis98">github.com/aziis98</a></li>
+    <li>Telegram &mdash; <a href="https://t.me/aziis98">t.me/aziis98</a></li>
+</ul>
 
     </main>
     <footer>
         &copy; Antonio De Lucreziis 2020
 
-        <!-- <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a> -->
+        
     </footer>
 
     <script src="/static/js/ux.js"></script>

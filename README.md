@@ -32,11 +32,11 @@ This time using a good old [Makefile](./Makefile).
 
 ### Output files
 
-- [.out/](.out/)
+- [dist/](dist/)
 
-    This is the main output directory and holds the complete website.
+    This is the main output directory and holds the complete website. (This was `.out` before but `live-server` doesn't like folder starting with a "." for live reload)
 
-- `.build/`
+- `.cache/`
 
     Holds temporary/cached files for incremental builds. 
 
