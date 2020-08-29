@@ -67,10 +67,10 @@ $(OUT)/index.html: layouts/index.html $(CACHE)/posts.json
 ## Generate Post Archive JSON
 
 $(CACHE)/posts.json: $(CACHE)/post/posts
-	@jq -R '{ posts: [ inputs | fromjson ] }' $< > $@
+	jq -R '{ posts: [ inputs | fromjson ] }' $< > $@
 
 $(CACHE)/post/posts: clean_posts $(POSTS_BUILD_YAML)
-	@for post_ref in $(POSTS_REFS); do	\
+	for post_ref in $(POSTS_REFS); do	\
 	    yq -c ". | .ref = \"$$post_ref\"" $(CACHE)/post/$$post_ref.yaml >> $(CACHE)/post/posts; \
 	done
 
@@ -82,17 +82,14 @@ clean_posts:
 ## Extracting data & content from posts and rendering to HTML
 
 # Extract markdown from posts
-
 $(CACHE)/post/%.md: src/post/%.md
-	@sed -n -e '1d;/---/,$$p' $< | sed '1d' > $@
+	awk '/---/ { p++; } p > 3 { print; } /---/ { p++; }' $< > $@
 
 # Extract yaml frontmatter from posts
-
 $(CACHE)/post/%.yaml: src/post/%.md
-	@sed -n -e '/---/,/---/p' $< | sed '1d;$$d' > $@
+	awk '/---/ { p++; } p == 2 { print; } /---/ { p++; } p>2 { exit; }' $< > $@
 
 # Render the markdown to HTML with pandoc
-
 $(CACHE)/post/%.html: $(CACHE)/post/%.md
 	pandoc --katex --quiet $< -o $@
 
@@ -103,7 +100,7 @@ $(CACHE)/post/%.html: $(CACHE)/post/%.md
 # Build tag files from the frontmatter of each post
 # TODO: al momento questo non è troppo bll per un makefile, sarebbe meglio trasformarla in una regola PHONY
 $(CACHE)/tags/%.tag: $(CACHE)/post/%.yaml
-	@yq -r '.tags[]' $< 2> /dev/null | \
+	yq -r '.tags[]' $< 2> /dev/null | \
 	    while read line; do \
 	        echo $* >> $(CACHE)/tags/$$line.tag; \
 	    done
@@ -112,7 +109,7 @@ $(CACHE)/tags/%.tag: $(CACHE)/post/%.yaml
 
 .PHONY: tags
 tags: clean_tags $(POSTS_BUILD_TAGS)
-	@find $(TAGS_PATH) | \
+	find $(TAGS_PATH) | \
 	    xargs basename -s .tag | \
 	    while read tagname; do	\
 	        jq -nR "{ name: \"$$tagname\", refs: [inputs | select(length>0)]}" $(CACHE)/tags/$$tagname.tag > $(CACHE)/tags/$$tagname.json; \

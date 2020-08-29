@@ -5,8 +5,3 @@ tags:
     - makefile
     - markdown
     - katex
----
-	@sed -n -e '1d;/---/,$$p' $< | sed '1d' > $@
-
-# Extract yaml frontmatter from posts
-$(CACHE)/post/%.yaml: src/post/%.md
