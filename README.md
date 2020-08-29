@@ -1,6 +1,6 @@
-# Prototype Blog 3
+# My Website (2020)
 
-This time using a good old [Makefile](./Makefile).
+This time using a good old [Makefile](./Makefile), see the post on <aziis98.com/post/new-website>.
 
 ## Architecture
 
@@ -42,7 +42,7 @@ This time using a good old [Makefile](./Makefile).
 
 ## Usage
 
-**Dependencies:** `make`, `inotifywait`, `yq`, `jq`, `pandoc`, https://github.com/aziis98/gotemplater, `live-server`, ... (but also: `sed`, ...)
+**Dependencies:** <https://github.com/aziis98/gotemplater>, `make`, `inotifywait`, `awk`, `yq`, `jq`, `pandoc`, `live-server`, ...
 
 **Commands:**
 
