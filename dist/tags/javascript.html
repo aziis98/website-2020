@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+        
+        aziis98.com
+        
+    </title>
+
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192x192.png">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/static/icon-192x192.png" />
+
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/lovelace.css">
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script 
+        defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+        integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" 
+        crossorigin="anonymous"></script>
+        
+    <script type="module">
+        Array.prototype.forEach.call(document.querySelectorAll('.math.inline'), $el => {
+            console.log($el.innerText);
+            katex.render($el.innerText, $el, { displayMode: false });
+        });
+        Array.prototype.forEach.call(document.querySelectorAll('.math.display'), $el => {
+            katex.render($el.innerText, $el, { displayMode: true });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu">
+            <span class="material-icons menu">menu</span>
+            <span class="material-icons close">close</span>
+        </label>
+        <nav>
+            <a class="logo" href="/" title="aziis98.com">
+                <svg width="100%" height="100%" viewBox="0 0 1000 1000">
+                    <g style="stroke-width:0.857654" transform="matrix(1.165971,0,0,1.165971,-82.985498,-82.985496)"
+                       id="layer1">
+                        <path d="m 370.35583,737.36325 52.42963,-138.22357 c 4.76633,-12.39246 10.48592,-16.20552 33.36431,-16.20552 h 198.27932 l 58.14923,161.10195 c 13.34572,40.03717 -25.73818,36.22411 -70.54168,39.08391 -5.7196,5.71959 -5.7196,25.73818 0,31.45778 35.27084,-0.95327 87.70047,-1.90654 124.87784,-1.90654 39.08391,0 73.40148,0.95327 108.67232,1.90654 5.7196,-5.7196 5.7196,-25.73819 0,-31.45778 -37.17737,-2.8598 -68.63515,-2.8598 -85.79394,-52.42963 L 594.37334,214.02022 c -5.7196,-9.53266 -7.62613,-16.20552 -14.29899,-27.64471 -50.5231,0.95326 -121.06478,0.95326 -129.64418,-0.95327 -5.71959,7.62613 -8.57939,8.5794 -19.06532,34.31758 L 219.7398,715.43813 c -25.73818,59.10249 -54.33616,64.82209 -95.3266,67.68189 -5.71959,5.71959 -5.71959,25.73818 0,31.45778 35.27084,-0.95327 47.6633,-1.90654 84.84068,-1.90654 39.0839,0 191.60646,0.95327 226.8773,1.90654 5.7196,-5.7196 5.7196,-25.73819 0,-31.45778 -36.22411,-1.90653 -81.02761,-5.7196 -65.77535,-45.75677 z M 473.30856,542.89699 c -21.92512,0 -28.59798,-1.90653 -24.78492,-12.39246 L 544.8035,288.37497 h 1.90654 l 92.4668,254.52202 z M 508.5794,205.44083 h 45.75676 L 323.64579,784.07328 h -49.56983 z"
+                              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.28826"
+                              id="path836" />
+                    </g>
+                </svg>
+            </a>
+            <div class="nav-group">
+                <a class="nav-link" href="/">Posts</a>
+                <a class="nav-link" href="/page/about.html">About</a>
+                <a style="display: none;" class="nav-link" href="/page/appunti.html">Appunti</a>
+            </div>
+        </nav>
+    </div>
+    <main>
+
+        <h2 class="center">#javascript</h2>
+
+<p>References:</p>
+
+<ul>
+    
+    <li>
+        <a href="/post/regex-split-parsing.html">regex-split-parsing</a>
+    </li>
+    
+</ul>
+
+    </main>
+    <footer>
+        &copy; Antonio De Lucreziis 2020
+
+        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+    </footer>
+
+    <script src="/static/js/ux.js"></script>
+</body>
+
+</html>
