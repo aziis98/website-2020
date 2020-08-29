@@ -1,7 +1,7 @@
 ---
 title: Regex Split Parsing
 description: A description
-date: 3 June 2020
+date: 3 July 2020
 tags: 
     - regex
     - javascript
