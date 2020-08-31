@@ -1,7 +1,7 @@
 ---
 title: New Website
 description: New website generated with a Makefile
-date: 29 August 2020
+date: 2020/08/29
 tags: 
     - makefile
     - markdown

@@ -1,4 +1,10 @@
 #!/bin/sh
+
+EVENTS=close_write,move,move_self,create,delete
+
 make -B $*
-live-server -q dist & 
-inotifywait -m -e close_write,move,move_self,create,delete -r src layouts | while read; do make $*; done
+live-server -q --wait=150 dist & 
+inotifywait -m -e $EVENTS -r src layouts | \
+    while read; do \
+        make $*; \
+    done
