@@ -64,6 +64,11 @@ footer {
 
 
 /* Typography */
+/* 
+body {
+    text-align: justify;
+    text-justify: distribute;
+} */
 
 p {
     margin-bottom: 1.15rem;
@@ -397,6 +402,12 @@ nav .logo:hover svg path {
 /* Nav on large screens */
 
 @media screen and (min-width: 40rem) {
+
+    body {
+        text-align: justify;
+        text-justify: distribute;
+    }    
+
     nav {
         transition: all 150ms ease-in-out;
         height: 4rem;
