@@ -105,8 +105,10 @@
 
     <p>This is my new website, the source code is hosted on Github at <a href="https://github.com/aziis98/website-2020" class="uri">https://github.com/aziis98/website-2020</a>. It is build all using a single (not too long) Makefile by processing all the markdown file using <a href="https://github.com/aziis98/gotemplater">gotemplater</a> (a cli utility I made, more of this later) and <a href="https://pandoc.org/MANUAL.html">pandoc</a>.</p>
 <h3 id="gotemplater">gotemplater</h3>
-<p>I made just for this project but I’m probably goint to use it very for this kind of things.</p>
-<p>I use it by piping content in standard input and providing a file to a Go template file and this produces a rendered Go template on standard output (there are also various options for telling were to get input from and where to output to). Still this is just one pretty short Go file.</p>
+<p>I made this just for this project but I’m probably going to use it very often for this kind of things.</p>
+<p>I use it by piping content in standard input and providing a data file to a Go template and the program produces a rendered Go template (there are also various options for telling were to get input from and where to send the output to).</p>
+<p>Still this utility is just a pretty short Go file.</p>
+<p>The only thing I might still add is a way to pass multiple data files.</p>
 <h2 id="makefile">Makefile</h2>
 <p>The complete Makefile can be found <a href="https://github.com/aziis98/website-2020/blob/master/Makefile">here</a>. Now I will try to explain more or less how the generation works.</p>
 <h3 id="variables">Variables</h3>

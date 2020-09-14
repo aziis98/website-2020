@@ -12,9 +12,13 @@ This is my new website, the source code is hosted on Github at <https://github.c
 
 ### gotemplater
 
-I made just for this project but I'm probably goint to use it very for this kind of things. 
+I made this just for this project but I'm probably going to use it very often for this kind of things. 
 
-I use it by piping content in standard input and providing a file to a Go template file and this produces a rendered Go template on standard output (there are also various options for telling were to get input from and where to output to). Still this is just one pretty short Go file.
+I use it by piping content in standard input and providing a data file to a Go template and the program produces a rendered Go template (there are also various options for telling were to get input from and where to send the output to). 
+
+Still this utility is just a pretty short Go file.
+
+The only thing I might still add is a way to pass multiple data files.
 
 ## Makefile
 
