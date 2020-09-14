@@ -7,12 +7,12 @@ tags:
     - webdev
 ---
 
-Here is an hypercube, ported from the old website hosted on <a href="https://poisson.phc.dm.unipi.it/~delucreziis">https://poisson.phc.dm.unipi.it<wbr>/~delucreziis</a>.
+Here is an hypercube, ported from the old website hosted on <a href="https://poisson.phc.dm.unipi.it/~delucreziis/">https://poisson.phc.dm.unipi.it<wbr>/~delucreziis/</a>.
 
 <canvas width="400" height="400" id="canvas"></canvas>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.17.0/math.min.js"></script>
-<script src="/static/js/hypercube.js"></script>
+<script src="static/js/hypercube.js"></script>
 <style>
 #canvas {
     display: block;
