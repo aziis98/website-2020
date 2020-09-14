@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+
+    <title>
+        
+        Tabella oraria delle lezioni &mdash; aziis98.com
+        
+    </title>
+
+    <meta name="description" content="Un&#39;idea interessante è quella di avere una tabella personalizzabile con gli orari delle lezioni">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="static/icon-192x192.png">
+
+    <meta property="og:title" content="Tabella oraria delle lezioni">
+    <meta property="og:description" content="Un&#39;idea interessante è quella di avere una tabella personalizzabile con gli orari delle lezioni">
+    <meta property="og:image" content="static/icon-192x192.png" />
+
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/lovelace.css">
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script 
+        defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+        integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" 
+        crossorigin="anonymous"></script>
+        
+    <script type="module">
+        Array.prototype.forEach.call(document.querySelectorAll('.math.inline'), $el => {
+            console.log($el.innerText);
+            katex.render($el.innerText, $el, { displayMode: false });
+        });
+        Array.prototype.forEach.call(document.querySelectorAll('.math.display'), $el => {
+            katex.render($el.innerText, $el, { displayMode: true });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu">
+            <span class="material-icons menu">menu</span>
+            <span class="material-icons close">close</span>
+        </label>
+        <nav>
+            <a class="logo" href="" title="aziis98.com">
+                <svg width="100%" height="100%" viewBox="0 0 1000 1000">
+                    <g style="stroke-width:0.857654" transform="matrix(1.165971,0,0,1.165971,-82.985498,-82.985496)"
+                       id="layer1">
+                        <path d="m 370.35583,737.36325 52.42963,-138.22357 c 4.76633,-12.39246 10.48592,-16.20552 33.36431,-16.20552 h 198.27932 l 58.14923,161.10195 c 13.34572,40.03717 -25.73818,36.22411 -70.54168,39.08391 -5.7196,5.71959 -5.7196,25.73818 0,31.45778 35.27084,-0.95327 87.70047,-1.90654 124.87784,-1.90654 39.08391,0 73.40148,0.95327 108.67232,1.90654 5.7196,-5.7196 5.7196,-25.73819 0,-31.45778 -37.17737,-2.8598 -68.63515,-2.8598 -85.79394,-52.42963 L 594.37334,214.02022 c -5.7196,-9.53266 -7.62613,-16.20552 -14.29899,-27.64471 -50.5231,0.95326 -121.06478,0.95326 -129.64418,-0.95327 -5.71959,7.62613 -8.57939,8.5794 -19.06532,34.31758 L 219.7398,715.43813 c -25.73818,59.10249 -54.33616,64.82209 -95.3266,67.68189 -5.71959,5.71959 -5.71959,25.73818 0,31.45778 35.27084,-0.95327 47.6633,-1.90654 84.84068,-1.90654 39.0839,0 191.60646,0.95327 226.8773,1.90654 5.7196,-5.7196 5.7196,-25.73819 0,-31.45778 -36.22411,-1.90653 -81.02761,-5.7196 -65.77535,-45.75677 z M 473.30856,542.89699 c -21.92512,0 -28.59798,-1.90653 -24.78492,-12.39246 L 544.8035,288.37497 h 1.90654 l 92.4668,254.52202 z M 508.5794,205.44083 h 45.75676 L 323.64579,784.07328 h -49.56983 z"
+                              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.28826"
+                              id="path836" />
+                    </g>
+                </svg>
+            </a>
+            <div class="nav-group">
+                <a id="nav-unipi" style="display: none;" class="nav-link" href="page/unipi.html">Università</a>
+                <a class="nav-link" href="">Posts</a>
+                <a class="nav-link" href="page/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    <main>
+
+        <article>
+    <header class="post-header">
+        <h1 class="post-title">Tabella oraria delle lezioni</h1>
+        <div class="post-date">
+            Posted on the 
+            <span>2020/09/11</span>
+            by
+            <a href="" rel="author">Antonio De Lucreziis</a>
+        </div>
+        <p class="post-tags">
+            
+            <a href="tags/draft.html" class="tag">#draft</a>
+            
+        </p>
+    </header>
+
+    <p>Qualche giorno fa ho scoperto questa pagina <a href="http://poisson.phc.dm.unipi.it/~resteghini/timetable/" class="uri">http://poisson.phc.dm.unipi.it/~resteghini/timetable/</a> (tutti i crediti per l’idea vanno a questo studente) e mi è venuta voglia di tentare di ricrearla aggiungendo qualche feature.</p>
+<h2 id="risultato">Risultato</h2>
+<style>
+    #container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 45rem;
+        width: max-content;
+        max-width: 90vw;
+    }
+
+    input[type=checkbox] {
+        display: flex;
+        flex-direction: row;
+
+        position: relative;
+        color: #333;
+        font: var(--font-text);
+
+        height: 1.5rem;
+    }
+
+    input[type=checkbox]::after {
+        content: attr(data-label);
+        position: absolute;
+        left: 100%;
+        top: -1px;
+        margin-left: 0.5rem;
+
+        width: max-content;
+    }
+
+    table, th, td {
+        text-align: center;
+        border: 1px solid #aaa;
+
+        margin-bottom: 1.5rem;
+    }
+
+    .corso {
+        display: none;
+    }
+
+    .corso.algebra-1:checked ~ table td .corso.algebra-1,
+    .corso.analisi-1:checked ~ table td .corso.analisi-1,
+    .corso.analisi-2:checked ~ table td .corso.analisi-2,
+    .corso.analisi-3:checked ~ table td .corso.analisi-3,
+    .corso.analisi-numerica:checked ~ table td .corso.analisi-numerica,
+    .corso.aritmetica:checked ~ table td .corso.aritmetica,
+    .corso.calcolo-scientifico:checked ~ table td .corso.calcolo-scientifico,
+    .corso.edp:checked ~ table td .corso.edp,
+    .corso.ega:checked ~ table td .corso.ega,
+    .corso.fisica-2:checked ~ table td .corso.fisica-2,
+    .corso.geometria-1:checked ~ table td .corso.geometria-1,
+    .corso.geometria-2:checked ~ table td .corso.geometria-2,
+    .corso.gtd:checked ~ table td .corso.gtd,
+    .corso.inglese:checked ~ table td .corso.inglese,
+    .corso.laboratorio-computazionale:checked ~ table td .corso.laboratorio-computazionale,
+    .corso.lcmc:checked ~ table td .corso.lcmc,
+    .corso.logica:checked ~ table td .corso.logica,
+    .corso.mepvsa:checked ~ table td .corso.mepvsa,
+    .corso.probabilità:checked ~ table td .corso.probabilità,
+    .corso.programmazione:checked ~ table td .corso.programmazione,
+    .corso.ricerca-operativa:checked ~ table td .corso.ricerca-operativa,
+    .corso.sistemi-dinamici:checked ~ table td .corso.sistemi-dinamici,
+    .corso.storia:checked ~ table td .corso.storia {
+        display: initial;
+    }
+
+
+</style>
+<div id="container">
+<input type="checkbox" class="corso storia" data-label="Storia della Matematica"/> <input type="checkbox" class="corso sistemi-dinamici" data-label="Sistemi Dinamici"/> <input type="checkbox" class="corso ricerca-operativa" data-label="Ricerca Operativa"/> <input type="checkbox" class="corso programmazione" data-label="Programmazione"/> <input type="checkbox" class="corso probabilità" data-label="Probabilità"/> <input type="checkbox" class="corso mepvsa" data-label="Matematiche Elementari da un Punto di Vista Superiore: Aritmetica"/> <input type="checkbox" class="corso logica" data-label="Logica"/> <input type="checkbox" class="corso lcmc" data-label="Laboratorio di Comunicazione Mediante Calcolatore"/> <input type="checkbox" class="corso laboratorio-computazionale" data-label="Laboratorio Computazionale"/> <input type="checkbox" class="corso inglese" data-label="Inglese Scientifico"/> <input type="checkbox" class="corso gtd" data-label="Geometria e Topologia Differenziale"> <input type="checkbox" class="corso geometria-2" data-label="Geometria 2"/> <input type="checkbox" class="corso geometria-1" data-label="Geometria 1"/> <input type="checkbox" class="corso fisica-2" data-label="Fisica 2"/> <input type="checkbox" class="corso ega" data-label="Elementi di Geometria Algebrica"/> <input type="checkbox" class="corso edp" data-label="Equazioni alle Derivate Parziali"/> <input type="checkbox" class="corso calcolo-scientifico" data-label="Calcolo Scientifico"/> <input type="checkbox" class="corso aritmetica" data-label="Aritmetica"/> <input type="checkbox" class="corso analisi-numerica" data-label="Analisi Numerica"/> <input type="checkbox" class="corso analisi-3" data-label="Analisi 3"/> <input type="checkbox" class="corso analisi-2" data-label="Analisi 2"/> <input type="checkbox" class="corso analisi-1" data-label="Analisi 1"/> <input type="checkbox" class="corso algebra-1" data-label="Algebra 1"/>
+<table>
+<thead>
+<th>
+</th>
+<th>
+Lunedì
+</th>
+<th>
+Martedì
+</th>
+<th>
+Mercoledì
+</th>
+<th>
+Giovedì
+</th>
+<th>
+Venerdì
+</th>
+</thead>
+<tbody>
+<tr>
+<th>
+9:00 - 10:45
+</th>
+<td>
+<div class="corso algebra-1" data-shortname="Algebra 1">
+Algebra 1
+</div>
+<div class="corso aritmetica" data-shortname="Aritmetica">
+Aritmetica
+</div>
+<div class="corso gtd" data-shortname="G.T.D.">
+Geometria e Topologia Differenziale
+</div>
+<div class="corso laboratorio-computazionale" data-shortname="Lab.Computazionale">
+Laboratorio Computazionale
+</div>
+</td>
+<td>
+<div class="corso analisi-numerica" data-shortname="Analisi Numerica">
+Analisi Numerica
+</div>
+<div class="corso gtd" data-shortname="G.T.D.">
+Geometria e Topologia Differenziale
+</div>
+<div class="corso programmazione" data-shortname="Programmazione">
+Programmazione
+</div>
+</td>
+<td>
+<div class="corso analisi-3" data-shortname="Analisi 3">
+Analisi 3
+</div>
+<div class="corso geometria-1" data-shortname="Geometria 1">
+Geometria 1
+</div>
+<div class="corso geometria-2" data-shortname="Geometria 2">
+Geometria 2
+</div>
+</td>
+<td>
+<div class="corso geometria-2" data-shortname="Geometria 2">
+Geometria 2
+</div>
+<div class="corso programmazione" data-shortname="Programmazione">
+Programmazione
+</div>
+<div class="corso probabilità" data-shortname="Probabilità">
+Probabilità
+</div>
+</td>
+<td>
+<div class="corso analisi-2" data-shortname="Analisi 2">
+Analisi 2
+</div>
+<div class="corso geometria-1" data-shortname="Geometria 1">
+Geometria 1
+</div>
+<div class="corso logica" data-shortname="Logica">
+Logica
+</div>
+</td>
+</tr>
+<tr>
+<th>
+11:00 - 12:45
+</th>
+<td>
+<div class="corso analisi-3" data-shortname="Analisi 3">
+Analisi 3
+</div>
+<div class="corso analisi-numerica" data-shortname="Analisi Numerica">
+Analisi Numerica
+</div>
+<div class="corso lcmc" data-shortname="L.C.M.C. (A)">
+Laboratorio Computazionale Mediante Calcolatore (A)
+</div>
+</td>
+<td>
+<div class="corso algebra-1" data-shortname="Algebra 1">
+Algebra 1
+</div>
+<div class="corso analisi-1" data-shortname="Analisi 1">
+Analisi 1
+</div>
+<div class="corso fisica-2" data-shortname="Fisica 2">
+Fisica 2
+</div>
+<div class="corso ricerca-operativa" data-shortname="Ricerca Operativa">
+Ricerca Operativa
+</div>
+</td>
+<td>
+<div class="corso analisi-2" data-shortname="Analisi 2">
+Analisi 2
+</div>
+<div class="corso ricerca-operativa" data-shortname="Ricerca Operativa">
+Ricerca Operativa
+</div>
+</td>
+<td>
+<div class="corso analisi-1" data-shortname="Analisi 1">
+Analisi 1
+</div>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<th>
+14:00 - 15:45
+</th>
+<td>
+<div class="corso geometria-1" data-shortname="Geometria 1">
+Geometria 1
+</div>
+<div class="corso inglese" data-shortname="Inglese Sci.">
+Inglese Scientifico
+</div>
+<div class="corso storia" data-shortname="S.d.M.">
+Storia della Matematica
+</div>
+</td>
+<td>
+<div class="corso calcolo-scientifico" data-shortname="Calcolo Sci.">
+Calcolo Scientifico
+</div>
+<div class="corso ega" data-shortname="E.G.A.">
+Elementi di Geometria Algebrica
+</div>
+<div class="corso edp" data-shortname="E.D.P.">
+Equazioni alle Derivate Parziali
+</div>
+</td>
+<td>
+<div class="corso analisi-1" data-shortname="Analisi 1">
+Analisi 1
+</div>
+<div class="corso calcolo-scientifico" data-shortname="Calcolo Sci.">
+Calcolo Scientifico
+</div>
+<div class="corso inglese" data-shortname="Inglese Sci.">
+Inglese Scientifico
+</div>
+</td>
+<td>
+<div class="corso analisi-numerica" data-shortname="Analisi Numerica">
+Analisi Numerica
+</div>
+<div class="corso aritmetica" data-shortname="Aritmetica">
+Aritmetica
+</div>
+<div class="corso gtd" data-shortname="G.T.D">
+Geometria e Topologia Differenziale
+</div>
+<div class="corso mepvsa" data-shortname="MEPVS-Arit.">
+Matematiche Elementari da un Punto di Vista Superiore: Aritmetica
+</div>
+</td>
+<td>
+<div class="corso inglese" data-shortname="Inglese Sci.">
+Inglese Scientifico
+</div>
+<div class="corso sistemi-dinamici" data-shortname="Sistemi Dinamici">
+Sistemi Dinamici
+</div>
+<div class="corso storia" data-shortname="S.d.M.">
+Storia della Matematica
+</div>
+</td>
+</tr>
+<tr>
+<th>
+16:00 - 17:45
+</th>
+<td>
+<div class="corso lcmc" data-shortname="L.C.M.C. (B)">
+Laboratorio Computazionale Mediante Calcolatore (B)
+</div>
+<div class="corso logica" data-shortname="Logica">
+Logica
+</div>
+<div class="corso sistemi-dinamici" data-shortname="Sistemi Dinamici">
+Sistemi Dinamici
+</div>
+</td>
+<td>
+<div class="corso probabilità" data-shortname="Probabilità">
+Probabilità
+</div>
+</td>
+<td>
+<div class="corso algebra-1" data-shortname="Algebra 1">
+Algebra 1
+</div>
+<div class="corso fisica-2" data-shortname="Fisica 2">
+Fisica 2
+</div>
+<div class="corso programmazione" data-shortname="Programmazione">
+Programmazione
+</div>
+<div class="corso ricerca-operativa" data-shortname="Ricerca Operativa">
+Ricerca Operativa
+</div>
+</td>
+<td>
+<div class="corso analisi-2" data-shortname="Analisi 2">
+Analisi 2
+</div>
+<div class="corso analisi-3" data-shortname="Analisi 3">
+Analisi 3
+</div>
+<div class="corso lcmc" data-shortname="L.C.M.C.">
+Laboratorio di Comunicazione Mediante Calcolatore
+</div>
+</td>
+<td>
+<div class="corso ega" data-shortname="E.G.A.">
+Elementi di Geometria Algebrica
+</div>
+<div class="corso edp" data-shortname="E.D.P.">
+Equazioni alle Derivate Parziali
+</div>
+<div class="corso mepvsa" data-shortname="MEPVS-Arit.">
+Matematiche Elementari da un Punto di Vista Superiore: Aritmetica
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</article>
+
+    </main>
+    <footer>
+        &copy; Antonio De Lucreziis 2020
+
+        
+    </footer>
+
+    <script src="static/js/ux.js"></script>
+</body>
+
+</html>
