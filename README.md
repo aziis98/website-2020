@@ -58,6 +58,10 @@ This time using a good old [Makefile](./Makefile), see the post on <aziis98.com/
 
     Starts a webserver and passes the args to make each time a file in `src/` or `layouts/` is changed.
 
+### Deploys
+
+- <https://poisson.phc.dm.unipi.it/~delucreziis/>: sito personale del dipartimento hostato dal PHC e per ora unico luogo su cui è disponibile il sito. Il deploy è fatto eseguendo sulla macchina in question lo script presente in questo gist <https://gist.github.com/aziis98/6401f86a89275c83e37f6c8388fde5b8>.
+
 ## TODO
 
 - Refactor the tag generation rule in the Makefile.
