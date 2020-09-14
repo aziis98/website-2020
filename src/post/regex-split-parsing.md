@@ -1,6 +1,6 @@
 ---
 title: Regex Split Parsing
-description: A description
+description: Javascript regex trick for parsing strings by splitting with lookahaeds
 date: 2020/07/03
 tags: 
     - math
