@@ -1,6 +1,6 @@
 # My Website (2020)
 
-This time using a good old [Makefile](./Makefile), see the post on <aziis98.com/post/new-website>.
+This time using a good old [Makefile](./Makefile), see the post on <https://poisson.phc.dm.unipi.it/~delucreziis/post/new-website>.
 
 ## Architecture
 
