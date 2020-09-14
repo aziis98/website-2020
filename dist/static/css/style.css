@@ -70,10 +70,13 @@ body {
     text-justify: distribute;
 } */
 
+li p {
+    margin: 0.35rem 0;
+}
+
 p {
     margin-bottom: 1.15rem;
 }
-
 
 /* Major Third: q = 1.250 */
 
@@ -404,8 +407,8 @@ nav .logo:hover svg path {
 @media screen and (min-width: 40rem) {
 
     body {
-        text-align: justify;
-        text-justify: distribute;
+        /* text-align: justify;
+        text-justify: distribute; */
     }    
 
     nav {

@@ -3,7 +3,7 @@
 EVENTS=close_write,move,move_self,create,delete
 
 make -B $*
-live-server -q --wait=150 dist & 
+live-server --wait=150 dist & 
 inotifywait -m -e $EVENTS -r src layouts | \
     while read; do \
         make $*; \
