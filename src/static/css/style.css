@@ -78,6 +78,10 @@ p {
     margin-bottom: 1.15rem;
 }
 
+ol, ul {
+    padding-left: 2rem;
+}
+
 /* Major Third: q = 1.250 */
 
 h1,
@@ -225,6 +229,18 @@ a:visited {
     color: royalblue;
     cursor: pointer;
     text-decoration: none;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 a:hover {
@@ -498,7 +514,11 @@ nav .logo:hover svg path {
     } */
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.75rem;
+    }
+
+    ol, ul {
+        padding-left: 1rem;
     }
 }
 
