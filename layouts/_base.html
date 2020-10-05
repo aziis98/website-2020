@@ -48,7 +48,6 @@
         
     <script type="module">
         Array.prototype.forEach.call(document.querySelectorAll('.math.inline'), $el => {
-            console.log($el.innerText);
             katex.render($el.innerText, $el, { displayMode: false });
         });
         Array.prototype.forEach.call(document.querySelectorAll('.math.display'), $el => {
